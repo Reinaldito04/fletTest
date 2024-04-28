@@ -1,0 +1,49 @@
+  def initialize_ui(self):
+        self.page.title = "hola"
+        self.page.vertical_alignment = ft.MainAxisAlignment.CENTER
+
+        self.inputUser = ft.CupertinoTextField(value='', text_align=ft.TextAlign.START, border_radius=15,
+                                               placeholder_text="Ingrese su usuario",
+                                               height=50,
+                                               tooltip="Ingrese su usuario para logear",
+                                               width=500,
+                                               )
+
+        self.txt_password = ft.CupertinoTextField(value='', text_align=ft.TextAlign.START, border_radius=15,
+                                                  placeholder_text="Ingrese su contraseña",
+                                                  height=50,
+                                                  tooltip="Ingrese su contraseña para logear",
+                                                  )
+
+        self.botonLogin = ft.ElevatedButton(text="ingresar",
+                                            width=150,
+                                            height=50,
+
+                                            bgcolor="blue",
+
+                                            color="white",
+                                            )
+
+        self.botonRegistro = ft.ElevatedButton(text="Registrar",
+                                               width=150,
+                                               height=50,
+
+                                               bgcolor="pink",
+
+                                               color="white",
+                                               )
+
+        self.page.add(
+            ft.Column([
+                self.inputUser,
+                self.txt_password,
+            ],
+                alignment=ft.MainAxisAlignment.CENTER,
+            ),
+            ft.Row([
+                self.botonLogin,
+                self.botonRegistro,
+            ],
+                alignment=ft.MainAxisAlignment.CENTER,
+            )
+        )
